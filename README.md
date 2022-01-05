@@ -29,4 +29,4 @@ Timeout.exe (A built in windows proccess) when called by a .exe sets off some an
 
 #### Compiling
 
-Any BAT to EXE converter will work.
+Any BAT to EXE converter will work however you can just run it raw .bat as batch is a "interpretation" language
