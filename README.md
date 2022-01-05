@@ -8,14 +8,19 @@ The successor to all of my "failed" attempts at making a easy to use server for 
 #### How it works
 
 First of all, all neccesary files are placed in appdata (you may recognize this from modding normal minecraft, it is where apps put their data, lol)
+
 Using bitsadmin the EULA (Pre filled out, you agree to it by starting the server) .jar and serverproperties (So .jar doesnt create a new EULA)
-Then it starts with
+
+Then it places some information before running the "java" command to start the server
 
 #### Soon
 
 Paper and other builds (to allow plugins)
+
 Full plugin suite (possible but I dont know if forge/spigot has the neccessary API's or conveniently setup file links)
+
 Decide amount of ram
+
 Community translations? (Submit a pull request, lol)
 
 #### Known bugs
