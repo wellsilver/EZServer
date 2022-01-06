@@ -31,10 +31,13 @@ cls
 if not exist /prim mkdir prim
 cd prim
 if not exist %i%.jar bitsadmin /transfer "Download %i%" /download /priority foreground https://wellsilver.000webhostapp.com/docs/%i%.jar %APPDATA%/mcserversimplified/prim/%i%.jar
+if %ERRORLEVEL%==1 goto blank
 cls
 if not exist server.properties bitsadmin /transfer "Download Extras" /download /priority foreground https://wellsilver.000webhostapp.com/docs/server.properties %APPDATA%/mcserversimplified/prim/server.properties
+if %ERRORLEVEL%==1 goto blank
 cls
 if not exist eula.txt bitsadmin /transfer "Download Extras" /download /priority foreground https://wellsilver.000webhostapp.com/docs/eula.txt %APPDATA%/mcserversimplified/prim/eula.txt
+if %ERRORLEVEL%==1 goto blank
 :start2
 cls
 echo All checks done, capped at 2 gigabytes of ram
