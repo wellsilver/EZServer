@@ -8,7 +8,6 @@ REM check if the server has been installed before
 if not exist %APPDATA%/mcserversimplified goto install
 cd %APPDATA%/mcserversimplified
 call var.bat
-pause
 REM bitsadmin /addfile myDownloadJob https://downloadsrv/10mb.zip c:\10mb.zip
 
 :home
