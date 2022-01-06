@@ -1,5 +1,4 @@
 # EZServer
-The successor to all of my "failed" attempts at making a easy to use server for minecraft 
 
 ### TO START THE SERVER, FOLLOW INSTRUCTIONS IN APP
 ### TO CONNECT TO THE SERVER, TYPE "localhost" IN IP ADDRESS BAR (Where you put hypixel.net, mineplex.net)
