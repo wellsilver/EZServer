@@ -62,7 +62,7 @@ goto home
 
 :reinstall
 cd %APPDATA%
-del mcserversimplified
+del /mcserversimplified
 :install
 cls
 echo Welcome to the install wizard
