@@ -1,4 +1,5 @@
 @echo off
+:load
 set /a launcher_version = v1
 echo Loading
 timeout /t 3 >nul
@@ -16,13 +17,17 @@ echo Welcome!
 echo Legacy not available on this version
 echo Only 1.17 and 1.18 downloads are available on this version
 echo You also agree to Mojangs Terms Of Service
-set /p i=ver$
+echo You can also type "reinstall" to re-install the launcher
+echo And "Delete" to delete any saved server files
+set /p i=ver$ 
+if %i% == reinstall goto reinstall
+if %i% == delete goto delete
 :start
 cls
 echo What to do when the server stops?
 echo 1 for auto restart 2 for close and 3 to return to home
 echo After deciding it will download the selected version
-set /p s=num$
+set /p s=num$ 
 cls
 if not exist /prim mkdir prim
 cd prim
@@ -45,9 +50,9 @@ if %s% == 1 goto start2
 if %s% == 2 goto blank
 if %s% == 3 goto home2
 echo you didnt configure it properly!
-timeout /t 2 >nul
+echo.
 echo Dont worry, click any button and go back to home
-pause
+set /p pauseripoff=$
 goto home2
 
 :home2
@@ -56,11 +61,12 @@ goto home
 
 
 
-
-
+:reinstall
+cd %APPDATA%
+del mcserversimplified
 :install
 cls
-echo Looks like theres no installation
+echo Welcome to the install wizard
 echo will you be fine with C://programfiles/mcserversimplified
 set /p i=Y/N: 
 if %i% == Y goto install2
@@ -73,7 +79,11 @@ cd %APPDATA%
 mkdir mcserversimplified
 cd mcserversimplified
 mkdir jar
-echo REM Start >>var.bat
+goto load
+
+:delete
+cd %APPDATA%
+del mcserversimplified
 
 REM DO NOT PLACE ANY FUNCTIONS UNDER BLANK, IT KICKS THE THING OUT
 :blank
