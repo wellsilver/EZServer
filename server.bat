@@ -17,6 +17,7 @@ echo Legacy not available on this version
 echo Only 1.17 and 1.18 downloads are available on this version
 echo You also agree to Mojangs Terms Of Service
 echo You can also type "reinstall" to re-install the launcher
+echo "Configure" to configure the launcher
 echo And "Delete" to delete any saved server files
 set /p i=ver$ 
 if %i% == reinstall goto reinstall
