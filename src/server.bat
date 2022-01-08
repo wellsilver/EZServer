@@ -91,6 +91,7 @@ cd ..
 if exist var.bat del var.bat
 bitsadmin /transfer "Download variables" /download /priority foreground https://wellsilver.000webhostapp.com/docs/var.zip %APPDATA%/mcserversimplified/bin/var.zip
 %extd% /unzip %APPDATA%/mcserversimplified/bin/var.zip %APPDATA%/mcserversimplified
+call var.bat
 goto injarend
 :delete
 cd %APPDATA%
