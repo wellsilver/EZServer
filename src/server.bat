@@ -31,7 +31,8 @@ set /p s=num$
 cls
 if not exist /prim mkdir prim
 cd prim
-if not exist %i%.jar bitsadmin /transfer "Download %i%" /download /priority foreground https://wellsilver.000webhostapp.com/docs/%i%.jar %APPDATA%/mcserversimplified/prim/%i%.jar
+if not exist %i%.jar goto injar
+:injarend
 if %ERRORLEVEL%==1 goto blank
 cls
 if not exist server.properties bitsadmin /transfer "Download Extras" /download /priority foreground https://wellsilver.000webhostapp.com/docs/server.properties %APPDATA%/mcserversimplified/prim/server.properties
@@ -84,6 +85,13 @@ cd mcserversimplified
 mkdir jar
 goto load
 
+:injar
+REM DOWNLOAD JAR
+cd ..
+if exist var.bat del var.bat
+bitsadmin /transfer "Download variables" /download /priority foreground https://wellsilver.000webhostapp.com/docs/var.zip %APPDATA%/mcserversimplified/bin/var.zip
+%extd% /unzip %APPDATA%/mcserversimplified/bin/var.zip %APPDATA%/mcserversimplified
+goto injarend
 :delete
 cd %APPDATA%
 del mcserversimplified
