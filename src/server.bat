@@ -91,6 +91,8 @@ cd ..
 if exist var.bat del var.bat
 bitsadmin /transfer "Download variables" /download /priority foreground https://wellsilver.000webhostapp.com/docs/var.zip %APPDATA%/mcserversimplified/bin/var.zip
 %extd% /unzip %APPDATA%/mcserversimplified/bin/var.zip %APPDATA%/mcserversimplified
+echo set /a i = %i% >>var2.bat
+REM communicate with var using var2 because "call" sandboxes
 call var.bat
 goto injarend
 :delete
