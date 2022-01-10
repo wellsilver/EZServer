@@ -1,5 +1,5 @@
 @echo off
-call var2
+call var2.bat
 REM get var
 REM why? This is because the free hoster limits bandwith so I need to download the files from their source
 
