@@ -88,6 +88,8 @@ goto load
 :injar
 REM DOWNLOAD JAR
 cd ..
+if exist bin del bin
+mkdir bin
 if exist var.bat del var.bat
 if exist var2.bat del var2.bat
 REM init setup
