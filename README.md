@@ -1,5 +1,5 @@
 # EZServer
-
+Remember to download from "Releases"
 ### TO START THE SERVER, FOLLOW INSTRUCTIONS IN APP
 ### TO CONNECT TO THE SERVER, TYPE "localhost" IN IP ADDRESS BAR (Where you put hypixel.net, mineplex.net)
 
