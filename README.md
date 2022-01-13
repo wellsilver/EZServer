@@ -30,7 +30,3 @@ this might not be a problem for some time.
 If enough people download the server.jar it may be a issue, I used up 2% of the (free hosting lol) monthly bandwith just testing the program
 
 Timeout.exe (A built in windows proccess) when called by a .exe sets off some anti viruses, sadly there is no easy workaround however you are free to submit one in issues or implement it yourself with a pull request
-
-### Compiling
-
-Any BAT to EXE converter will work however you can just run it raw .bat as batch is a "interpretation" language
