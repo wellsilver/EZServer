@@ -14,7 +14,7 @@ Then it places some information before running the "java" command to start the s
 
 ### Soon
 
-Paper and other builds (to allow plugins)
+Paper and other builds (to allow plugins, taking suggestions in #issues)
 
 Full plugin suite (possible but I dont know if forge/spigot has the neccessary API's or conveniently setup file links)
 
