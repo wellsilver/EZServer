@@ -27,6 +27,6 @@ Community translations? (Submit a pull request, lol)
 I havent tested if this is actually a problem yet, but if you start a version incompatible with the server.properties it may create a new one,
 this might not be a problem for some time.
 
-If enough people download the server.jar it may be a issue, I used up 2% of the (free hosting lol) monthly bandwith just testing the program
+If enough people download the server.jar it may be a issue, I used up 2% of the (free hosting lol) monthly bandwith just testing the program a workaround is in progress for this
 
 Timeout.exe (A built in windows proccess) when called by a .exe sets off some anti viruses, sadly there is no easy workaround however you are free to submit one in issues or implement it yourself with a pull request
