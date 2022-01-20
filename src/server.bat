@@ -1,22 +1,17 @@
 @echo off
 :load
 set /a launcher_version = v1
-echo Loading
-timeout /t 3 >nul
 title MC
 REM check if the server has been installed before
 if not exist %APPDATA%/mcserversimplified goto install
 cd %APPDATA%/mcserversimplified
-call var.bat
 REM bitsadmin /addfile myDownloadJob https://downloadsrv/10mb.zip c:\10mb.zip
 
 :home
 cls
 echo Welcome!
-echo Legacy not available on this version
-echo Only 1.17 and 1.18 downloads are available on this version
-echo You also agree to Mojangs Terms Of Service
-echo You can also type "reinstall" to re-install the launcher
+echo Only 1.18 downloads are available on this version
+echo Put P before 1.18 (P1.18) to use paper.
 echo "Configure" to configure the launcher
 echo And "Delete" to delete any saved server files
 set /p i=ver$ 
@@ -46,7 +41,8 @@ echo All checks done, capped at 2 gigabytes of ram
 echo Minecraft version is %i% 
 echo Launcher version is %launcher_version%
 echo.
-java -Xms2G -Xmx2G -jar %i%.jar --nogui
+cd %APPDATA%/mcserversimplified/prim
+java -jar lol.jar --nogui
 echo.
 echo Server stopped, waiting 3 seconds
 timeout /t 3 >nul
@@ -95,8 +91,6 @@ if exist var2.bat del var2.bat
 REM init setup
 bitsadmin /transfer "Download variables" /download /priority foreground https://wellsilver.000webhostapp.com/docs/var.zip %APPDATA%/mcserversimplified/bin/var.zip
 %extd% /unzip %APPDATA%/mcserversimplified/bin/var.zip %APPDATA%/mcserversimplified
-echo set /a i = %i% >>var2.bat
-REM communicate with var using var2 because "call" sandboxes
 call var.bat
 goto injarend
 :delete
