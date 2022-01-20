@@ -1,4 +1,4 @@
-REM why? This is because the free hoster limits bandwith so I need to download the files from their source
+REM THIS MAY NOT BE WHAT IS ACTUALLY REMOTELY, IT IS (AND SHOULD BE) VERY SIMILAR.
 
 REM original jars [no prefix]
 if %i%==1.18 bitsadmin /transfer "Download 1.18" /download /priority foreground https://launcher.mojang.com/v1/objects/125e5adf40c659fd3bce3e66e67a16bb49ecc1b9/server.jar %APPDATA%/mcserversimplified/prim/jar.jar
