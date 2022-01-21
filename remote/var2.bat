@@ -1,4 +1,5 @@
 REM PLUGINS YAY
+if not exist %APPDATA%/mcserversimplified/plugins mkdir plugins
 :pluginz
 echo 1. Worldedit
 echo 2. EssentialsX bundle
@@ -10,10 +11,15 @@ goto pluginz
 REM PLUGINZ
 :worldedit
 if exist %APPDATA%/mcserversimplified/plugins/worldedit.jar goto installedallready
-bitsadmin /transfer "Download Mojang worldedit" /download /priority foreground https://dev.bukkit.org/projects/worldedit/files/latest %APPDATA%/mcserversimplified/plugins/worldedit.jar
+bitsadmin /transfer "Download worldedit" /download /priority foreground https://dev.bukkit.org/projects/worldedit/files/latest %APPDATA%/mcserversimplified/plugins/worldedit.jar
 goto finished
 
-
+:EssentialsX
+if exist %APPDATA%/mcserversimplified/plugins/Essentials.jar goto installedallready
+bitsadmin /transfer "Download core" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsX-2.19.2.jar %APPDATA%/mcserversimplified/plugins/worldedit.jar
+bitsadmin /transfer "Download chat" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsXChat-2.19.2.jar %APPDATA%/mcserversimplified/plugins/worldedit.jar
+bitsadmin /transfer "Download spawn" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsXChat-2.19.2.jar %APPDATA%/mcserversimplified/plugins/worldedit.jar
+goto finished
 
 :installedallready
 cls
