@@ -1,7 +1,7 @@
 @echo off
 if "%b2eprogramfilename%"==""  (
   echo There have been issues when using the .bat instead of the app
-  echo Please not that the .bat may not work properly and is unsupported
+  echo Please note that the .bat may not work properly and is unsupported
   pause
 )
 
