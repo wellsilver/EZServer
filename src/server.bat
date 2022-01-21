@@ -1,7 +1,7 @@
 @echo off
 if "%b2eprogramfilename%"==""  (
-  echo There have been issues when using the .bat instead of the app
-  echo Please note that the .bat may not work properly and is unsupported
+  echo There WILL be issues when using the .bat
+  echo It is recommended you download the .exe in releases
   pause
 )
 
