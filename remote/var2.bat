@@ -46,9 +46,9 @@ goto pluginz
 :delete
 cls
 echo What plugin would you like to delete? (back to go back)
-echo 1. Worldedit
-echo 2. EssentialsX bundle
-echo 3. Luckperms
+if exist %APPDATA%/mcserversimplified/plugins/worldedit.jar echo 1. Worldedit
+if exist %APPDATA%/mcserversimplified/plugins/essentials.jar echo 2. EssentialsX bundle
+if exist %APPDATA%/mcserversimplified/plugins/luckperms.jar echo 3. Luckperms
 set /p delplugin=$ 
 if %delplugin% == 1 del %APPDATA%/mcserversimplified/plugins/worldedit.jar
 if %delplugin% == 2 goto EssentialsXDEL
@@ -59,6 +59,7 @@ goto delete
 del %APPDATA%/mcserversimplified/plugins/essentials.jar
 del %APPDATA%/mcserversimplified/plugins/essentials.jar
 del %APPDATA%/mcserversimplified/plugins/essentials.jar
+goto delete
 :finished
 cls
 echo Finished!
