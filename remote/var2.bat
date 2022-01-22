@@ -1,9 +1,10 @@
+@echo off
 REM PLUGINS YAY
 rem also, some users may have .ps1 disabled so it would be very difficult to use wget
 
-if not exist %APPDATA%/mcserversimplified/plugins mkdir plugins
 :pluginz
-echo Extra cmd: "Exit"-Duh "Del"-delete
+cls
+echo Extra cmd: "exit"-Duh "del"-delete
 echo 1. Worldedit
 echo 2. EssentialsX bundle
 echo 3. Luckperms
@@ -14,15 +15,16 @@ if %plugin% == 2 goto EssentialsX
 if %plugin% == 3 goto luckperms
 
 if %plugin% == del goto delete
-if %plugin% == Exist goto :eof
+if %plugin% == exit goto :eof
 goto pluginz
 
 REM PLUGINZ
 :worldedit
 if exist %APPDATA%/mcserversimplified/plugins/worldedit.jar goto installedallready
-bitsadmin /transfer "Download worldedit" /download /priority foreground https://dev.bukkit.org/projects/worldedit/files/latest %APPDATA%/mcserversimplified/plugins/worldedit.jar
+bitsadmin /transfer "Download worldedit" /download /priority foreground https://github.com/wellsilver/test/releases/download/e/worldedit-mod-7.2.8.jar %APPDATA%/mcserversimplified/plugins/worldedit.jar
 rem bukkit is so convenient
 rem Unlike others, *intense staring at "buildtools"*
+pause
 goto finished
 
 :EssentialsX
@@ -50,16 +52,16 @@ if exist %APPDATA%/mcserversimplified/plugins/worldedit.jar echo 1. Worldedit
 if exist %APPDATA%/mcserversimplified/plugins/essentials.jar echo 2. EssentialsX bundle
 if exist %APPDATA%/mcserversimplified/plugins/luckperms.jar echo 3. Luckperms
 set /p delplugin=$ 
-if %delplugin% == 1 del %APPDATA%/mcserversimplified/plugins/worldedit.jar
+if %delplugin% == 1 del %APPDATA%\mcserversimplified\plugins\worldedit.jar
 if %delplugin% == 2 goto EssentialsXDEL
-if %delplugin% == 3 del %APPDATA%/mcserversimplified/plugins/luckperms.jar
+if %delplugin% == 3 del %APPDATA%\mcserversimplified\plugins\luckperms.jar
 if %delplugin% == back goto pluginz
 goto delete
 :EssentialsXDEL
-del %APPDATA%/mcserversimplified/plugins/essentials.jar
-del %APPDATA%/mcserversimplified/plugins/essentials.jar
-del %APPDATA%/mcserversimplified/plugins/essentials.jar
-goto delete
+del %APPDATA%\mcserversimplified\plugins\essentials.jar
+del %APPDATA%\mcserversimplified\plugins\essentialsC.jar
+del %APPDATA%\mcserversimplified\plugins\essentialsS.jar
+goto pluginz
 :finished
 cls
 echo Finished!
