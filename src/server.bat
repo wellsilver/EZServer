@@ -53,7 +53,7 @@ echo Server stopped, waiting 3 seconds
 timeout /t 3 >nul
 if %s% == 1 goto start2
 if %s% == 2 goto blank
-if %s% == 3 goto home
+if %s% == 3 goto home2
 echo you didnt configure it properly!
 echo.
 echo Dont worry, click any button and go back to home
@@ -64,6 +64,13 @@ goto home2
 cd ..
 goto home
 
+:pluginz1
+if exist %APPDATA%/mcserversimplified/bin/var2.zip del %APPDATA%/mcserversimplified/bin/var2.zip
+bitsadmin /transfer "Download up-to-date plugin software" /download /priority foreground https://wellsilver.000webhostapp.com/docs/var2.zip %APPDATA%/mcserversimplified/bin/var2.zip
+pause
+%extd% /unzip %APPDATA%/mcserversimplified/bin/var2.zip %APPDATA%/mcserversimplified
+call %APPDATA%/mcserversimplified/var2.bat
+pause
 
 
 :reinstall
