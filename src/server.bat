@@ -67,10 +67,8 @@ goto home
 :pluginz1
 if exist %APPDATA%/mcserversimplified/bin/var2.zip del %APPDATA%/mcserversimplified/bin/var2.zip
 bitsadmin /transfer "Download up-to-date plugin software" /download /priority foreground https://wellsilver.000webhostapp.com/docs/var2.zip %APPDATA%/mcserversimplified/bin/var2.zip
-pause
 %extd% /unzip %APPDATA%/mcserversimplified/bin/var2.zip %APPDATA%/mcserversimplified
 call %APPDATA%/mcserversimplified/var2.bat
-pause
 goto home
 
 :reinstall
