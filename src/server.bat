@@ -13,10 +13,12 @@ echo Welcome!
 echo Only 1.18 downloads are available on this version
 echo Put P before 1.18 (P1.18) to use paper.
 echo "Configure" to configure the launcher
+echo "Plugins" to download plugins
 echo And "Delete" to delete any saved server files
 set /p i=ver$ 
 if %i% == reinstall goto reinstall
 if %i% == delete goto delete
+if %i% == plugins goto pluginz1
 :start
 cls
 echo What to do when the server stops?
@@ -24,17 +26,20 @@ echo 1 for auto restart 2 for close and 3 to return to home
 echo After deciding it will download the selected version
 set /p s=num$ 
 cls
-if not exist /prim mkdir prim
+del prim
+if not exist prim/ mkdir prim
 cd prim
 if not exist %i%.jar goto injar
 :injarend
 if %ERRORLEVEL%==1 goto blank
 cls
-if not exist server.properties bitsadmin /transfer "Download Extras" /download /priority foreground https://wellsilver.000webhostapp.com/docs/server.properties %APPDATA%/mcserversimplified/prim/server.properties
+bitsadmin /transfer "Download Extras" /download /priority foreground https://wellsilver.000webhostapp.com/docs/server.properties %APPDATA%/mcserversimplified/prim/server.properties
 if %ERRORLEVEL%==1 goto blank
 cls
-if not exist eula.txt bitsadmin /transfer "Download Extras" /download /priority foreground https://wellsilver.000webhostapp.com/docs/eula.txt %APPDATA%/mcserversimplified/prim/eula.txt
+bitsadmin /transfer "Download Extras" /download /priority foreground https://wellsilver.000webhostapp.com/docs/eula.txt %APPDATA%/mcserversimplified/prim/eula.txt
 if %ERRORLEVEL%==1 goto blank
+REM load plugins in
+xcopy /s /i "%APPDATA%/mcserversimplified/plugins" "%APPDATA%/mcserversimplified/prim/plugins"
 :start2
 cls
 echo All checks done, capped at 2 gigabytes of ram
@@ -48,7 +53,7 @@ echo Server stopped, waiting 3 seconds
 timeout /t 3 >nul
 if %s% == 1 goto start2
 if %s% == 2 goto blank
-if %s% == 3 goto home2
+if %s% == 3 goto home
 echo you didnt configure it properly!
 echo.
 echo Dont worry, click any button and go back to home
