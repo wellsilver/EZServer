@@ -71,11 +71,11 @@ pause
 %extd% /unzip %APPDATA%/mcserversimplified/bin/var2.zip %APPDATA%/mcserversimplified
 call %APPDATA%/mcserversimplified/var2.bat
 pause
-
+goto home
 
 :reinstall
 cd %APPDATA%
-del /mcserversimplified
+del mcserversimplified
 :install
 cls
 echo Welcome to the install wizard
