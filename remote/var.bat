@@ -5,7 +5,7 @@ if %i%==1.18 bitsadmin /transfer "Download Mojang 1.18" /download /priority fore
 
 
 REM paper (may be outdated lol) [P before begining]
-if %i%==P1.18 bitsadmin /transfer "Download paper 1.18#167" /download /priority foreground https://papermc.io/api/v2/projects/paper/versions/1.18.1/builds/167/downloads/paper-1.18.1-167.jar %APPDATA%/mcserversimplified/prim/jar.jar
+if %i%==P1.18 bitsadmin /transfer "Download paper 1.18#177" /download /priority foreground https://papermc.io/api/v2/projects/paper/versions/1.18.1/builds/177/downloads/paper-1.18.1-177.jar %APPDATA%/mcserversimplified/prim/jar.jar
 
 
 
