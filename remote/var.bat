@@ -1,5 +1,6 @@
 @echo off
 
+if %i%==1.17 goto 1.17
 if %i%==1.18 goto 1.18
 if %i%==P1.18 goto P1.18
 goto error
