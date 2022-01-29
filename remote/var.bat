@@ -12,6 +12,7 @@ REM About bukkit and spigot, they dont provide any kind of direct link and this 
 REM There is a possible workaround though, just using the buildtools to build them normally, I know that for sure this will require some extra work but it might actually work?
 :1.17
 bitsadmin /transfer "Download 1.17" /download /priority foreground https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar %APPDATA%/mcserversimplified/prim/jar.jar
+goto cool
 :P1.18
 bitsadmin /transfer "Download paper 1.18#177" /download /priority foreground https://papermc.io/api/v2/projects/paper/versions/1.18.1/builds/177/downloads/paper-1.18.1-177.jar %APPDATA%/mcserversimplified/prim/jar.jar
 goto cool
