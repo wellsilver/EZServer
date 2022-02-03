@@ -1,6 +1,6 @@
 @echo off
 :load
-set /a launcher_version = v1
+set /a launcher_version =4
 title MC
 REM check if the server has been installed before
 if not exist %APPDATA%/mcserversimplified goto install
@@ -19,6 +19,7 @@ set /p i=ver$
 if %i% == reinstall goto reinstall
 if %i% == delete goto delete
 if %i% == plugins goto pluginz1
+if %i% == versions goto listv
 :start
 cls
 echo What to do when the server stops?
