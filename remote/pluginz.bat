@@ -23,23 +23,23 @@ goto pluginz
 
 REM PLUGINZ
 :worldedit
-if exist %APPDATA%/mcserversimplified/plugins/worldedit.jar goto installedallready
-bitsadmin /transfer "Download worldedit" /download /priority foreground https://github.com/wellsilver/test/releases/download/e/worldedit-mod-7.2.8.jar %APPDATA%/mcserversimplified/plugins/worldedit.jar
+if exist %APPDATA%/EZServer5/plugins/worldedit.jar goto installedallready
+bitsadmin /transfer "Download worldedit" /download /priority foreground https://github.com/wellsilver/test/releases/download/e/worldedit-mod-7.2.8.jar %APPDATA%/EZServer5/plugins/worldedit.jar
 rem bukkit is so convenient
 rem Unlike others, *intense staring at "buildtools"*
 pause
 goto finished
 
 :EssentialsX
-if exist %APPDATA%/mcserversimplified/plugins/Essentials.jar goto installedallready
-bitsadmin /transfer "Download core" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsX-2.19.2.jar %APPDATA%/mcserversimplified/plugins/essentials.jar
-bitsadmin /transfer "Download chat" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsXChat-2.19.2.jar %APPDATA%/mcserversimplified/plugins/essentialsC.jar
-bitsadmin /transfer "Download spawn" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsXSpawn-2.19.2.jar %APPDATA%/mcserversimplified/plugins/essentialsS.jar
+if exist %APPDATA%/EZServer5/plugins/Essentials.jar goto installedallready
+bitsadmin /transfer "Download core" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsX-2.19.2.jar %APPDATA%/EZServer5/plugins/essentials.jar
+bitsadmin /transfer "Download chat" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsXChat-2.19.2.jar %APPDATA%/EZServer5/plugins/essentialsC.jar
+bitsadmin /transfer "Download spawn" /download /priority foreground https://github.com/EssentialsX/Essentials/releases/download/2.19.2/EssentialsXSpawn-2.19.2.jar %APPDATA%/EZServer5/plugins/essentialsS.jar
 goto finished
 :EssentialsXdel
 
 :luckperms
-if exist %APPDATA%/mcserversimplified/plugins/luckperms.jar goto installedallready
+if exist %APPDATA%/EZServer5/plugins/luckperms.jar goto installedallready
 bitsadmin /transfer "Download luckperms bukkit5.3.98" /download /priority foreground https://ci.lucko.me/job/LuckPerms/1398/artifact/bukkit/loader/build/libs/LuckPerms-Bukkit-5.3.98.jar %APPDATA%/mcserversimplified/plugins/luckperms.jar
 goto finished
 :installedallready
@@ -51,19 +51,19 @@ goto pluginz
 :delete
 cls
 echo What plugin would you like to delete? (back to go back)
-if exist %APPDATA%/mcserversimplified/plugins/worldedit.jar echo 1. Worldedit
-if exist %APPDATA%/mcserversimplified/plugins/essentials.jar echo 2. EssentialsX bundle
-if exist %APPDATA%/mcserversimplified/plugins/luckperms.jar echo 3. Luckperms
+if exist %APPDATA%/EZServer5/plugins/worldedit.jar echo 1. Worldedit
+if exist %APPDATA%/EZServer5/plugins/essentials.jar echo 2. EssentialsX bundle
+if exist %APPDATA%/EZServer5/plugins/luckperms.jar echo 3. Luckperms
 set /p delplugin=$ 
-if %delplugin% == 1 del %APPDATA%\mcserversimplified\plugins\worldedit.jar
+if %delplugin% == 1 del %APPDATA%\EZServer5\plugins\worldedit.jar
 if %delplugin% == 2 goto EssentialsXDEL
-if %delplugin% == 3 del %APPDATA%\mcserversimplified\plugins\luckperms.jar
+if %delplugin% == 3 del %APPDATA%\EZServer5\plugins\luckperms.jar
 if %delplugin% == back goto pluginz
 goto delete
 :EssentialsXDEL
-del %APPDATA%\mcserversimplified\plugins\essentials.jar
-del %APPDATA%\mcserversimplified\plugins\essentialsC.jar
-del %APPDATA%\mcserversimplified\plugins\essentialsS.jar
+del %APPDATA%\EZServer5\plugins\essentials.jar
+del %APPDATA%\EZServer5\plugins\essentialsC.jar
+del %APPDATA%\EZServer5\plugins\essentialsS.jar
 goto pluginz
 :finished
 cls
