@@ -10,6 +10,12 @@ echo.
 echo %APPDATA%/EZServer5
 echo.
 pause
+mkdir %APPDATA%\EZServer5
+mkdir %APPDATA%\EZServer5\bin
+mkdir %APPDATA%\EZServer5\plugins
+mkdir %APPDATA%\EZServer5\configs
+mkdir %APPDATA%\EZServer5\injar
+mkdir %APPDATA%\EZServer5\serv
 
 :installoutdated
 cls
