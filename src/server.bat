@@ -57,7 +57,7 @@ goto start
 :s1
 echo Version: %launcherv%
 echo Minecraft version: %h%
-echo IP: %?%
+:: echo IP: %?%
 echo.
 java -jar lol.jar --nogui
 if %l%==1 goto s1
