@@ -45,7 +45,7 @@ cls
 echo.
 echo Type the version to download:
 echo.
-set /p h=%e%
+set /p h=$ 
 ::stuff here to download verzionz.bat and run it
 goto start
 
