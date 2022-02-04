@@ -13,16 +13,39 @@ cls
 
 echo Welcome!
 echo version: %launcherv%
-echo Type list for supported versions
 echo Type extra for more commands
 echo Type start to begin creating a MC server
+echo In any menu you can type "back" to go back.
 
 set /p e=$ 
 
 if %e%==list goto list
 if %e%==doc goto doc
 if %e%==start goto start
+if %e%==back goto easteregg
 
+goto home
+
+:start
+cls
+echo Welcome to MCServer setup
+echo To go with your previous setup just type "start" again.
+echo To add plugins type "plugin"
+echo To download the verson type "ver"
+echo Type "list" to list available versions
+:: echo to configure ram, port, etc, type "config"
+set /p r=$ 
+
+goto start
+
+
+:easteregg
+::when your very bored
+echo You found the easter egg! Or you looked through the github-
+echo I hope youre pillow is allways the right temperature
+echo I hope you never get too hot in your blanket
+echo And I hope you never stray from what you believe in.
+pause
 goto home
 
 :outdated
