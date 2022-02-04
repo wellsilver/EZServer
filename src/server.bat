@@ -50,14 +50,26 @@ set /p h=%e%
 goto start
 
 :s1
-echo Version: %launcherv%
-echo Minecraft version: %h%
-:: echo IP: %?%
+cls
+echo What to do when server ends?
+echo 1 for auto-restart 2 to go back to home
 echo.
-java -jar lol.jar --nogui
-if %l%==1 goto s1
-if %l%==2 goto start
+set /p res=$ 
+:s2
+call serv/start.bat
+echo.
+echo oops!
+echo.
+::logs soon
+if %res%==1 goto s2
+if %res%==2 goto resis2
 
+:resis2
+echo.
+echo Server crashed
+echo.
+pause
+goto home
 
 :easteregg
 ::when your very bored
