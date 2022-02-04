@@ -31,3 +31,4 @@ mkdir %APPDATA%\EZServer5\bin
 mkdir %APPDATA%\EZServer5\plugins
 mkdir %APPDATA%\EZServer5\configs
 mkdir %APPDATA%\EZServer5\injar
+mkdir %APPDATA%\EZServer5\serv
