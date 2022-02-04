@@ -1,9 +1,4 @@
 @echo off
-::first check if its outdated or uninstalled
-if exist %APPDATA%/mcserversimplified goto outdated
-if not exist %APPDATA%/EZServer5 goto install.bat
-::version
-set /a launcherv=Version-5-BETA
 ::generate job ID for bitsadmin
 ::for anyone copying code %random% is very predictable so is unsuitable for security
 set /a bitsidv=%random%
@@ -72,12 +67,3 @@ echo I hope you never get too hot in your blanket
 echo And I hope you never stray from what you believe in.
 pause
 goto home
-
-:outdated
-cls
-echo Outdated files have been detected.
-echo Update?
-set /p e=Y/N: 
-if %e%==y call install.bat
-if %e%==n goto eof
-goto outdated
