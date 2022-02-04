@@ -30,6 +30,6 @@ cls
 echo Outdated files have been detected.
 echo Update?
 set /p e=Y/N: 
-if %e%==y goto install
+if %e%==y call install
 if %e%==n goto :eof
 goto outdated
