@@ -33,7 +33,11 @@ del %APPDATA%/mcserversimplified
 goto inst
 
 :inst
-mkdir %APPDATA%/EZServerTEMP
-bitsadmin /transfer "Download EZServer" /download /priority foreground https://wellsilver.github.io/a/EZServer.zip %APPDATA%/EZServerTEMP/EZServer.zip
-%extd% /unzip %APPDATA%/EZServerTEMP/EZServer.zip %APPDATA%
+::change to wget? Does winXP have wget??? Idk
+mkdir %APPDATA%/EZServer5
+bitsadmin /transfer "Download EZServer" /download /priority foreground https://wellsilver.github.io/a/EZServer/Server.bat %APPDATA%/EZServer5/server.bat
+mkdir plugins
+mkdir injar
+mkdir serv
+bitsadmin /transfer "Download EZServer" /download /priority foreground https://wellsilver.github.io/a/EZServer/start.bat %APPDATA%/EZServer5/serv/start.bat
 goto h
