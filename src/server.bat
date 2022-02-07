@@ -38,15 +38,23 @@ if %r%==back goto home
 
 goto start
 
+:pluginz
+cls
+:: Immediately download
+if exist /bin/bin.bat del bin/bin.bat
+bitsadmin /transfer "Download" /download /priority foreground https://wellsilver.github.io/a/EZServer/pluginz.bat %APPDATA%/EZServer5/bin/bin.bat
+call bin/bin.bat
+goto start
 
 :verdown
-if exist %APPDATA%/EZServer5/lol.jar
 cls
 echo.
 echo Type the version to download:
 echo.
 set /p h=$ 
-::stuff here to download verzionz.bat and run it
+if exist bin/bin.bat del bin/bin.bat
+bitsadmin /transfer "Download" /download /priority foreground https://wellsilver.github.io/a/EZServer/verzionz.bat %APPDATA%/EZServer5/bin/bin.bat
+call bin/bin.bat
 goto start
 
 :s1
