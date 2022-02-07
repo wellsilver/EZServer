@@ -1,5 +1,14 @@
 @echo off
 :: This is the EXE, it downloads and runs server.bat
+
+where java >nul 2>nul
+if %errorlevel%==1 (
+    echo Java not found
+    echo It is required you download java from Oracle
+    pause
+    goto eof
+)
+
 :h
 set /a launcherv=betafive
 if exist %APPDATA%/mcserversimplified goto outdated
