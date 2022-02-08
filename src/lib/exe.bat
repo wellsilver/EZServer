@@ -60,6 +60,7 @@ mkdir %APPDATA%\EZServer5
 cd %APPDATA%\EZServer5
 bitsadmin /transfer "Download EZServer" /download /priority foreground https://wellsilver.github.io/a/EZServer/server.bat %APPDATA%/EZServer5/server.bat
 mkdir plugins
+mkdir bin
 mkdir injar
 mkdir serv
 bitsadmin /transfer "Download EZServer" /download /priority foreground https://wellsilver.github.io/a/EZServer/start.bat %APPDATA%/EZServer5/serv/start.bat
