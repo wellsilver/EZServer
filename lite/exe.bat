@@ -27,6 +27,13 @@ call bin/bin.bat
 
 
 :start
+cls
+echo What to do on crash?
+echo 1. Log and restart
+echo 2. Restart
+echo 3. Return home
+echo 4. Exit
+set /p conf=$ 
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set IP=%%a
 if not exist %APPDATA%\EZServerlite\serv\lol.jar goto error
 :strt
@@ -41,6 +48,7 @@ goto error
 :log
 cls
 echo Server stopped %TIME% >>%APPDATA%/EZServerlite/out/%DATE%.txt
+goto strt
 
 :error
 echo There was a error
