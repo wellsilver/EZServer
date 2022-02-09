@@ -40,5 +40,5 @@ echo goto eof                                           >>%APPDATA%\EZServerlite
 echo :outdated                                          >>%APPDATA%\EZServerlite\var.bat
 echo echo This version is outdated-                     >>%APPDATA%\EZServerlite\var.bat
 echo echo You should enter "reinstall" at the home menu.>>%APPDATA%\EZServerlite\var.bat
-echo pause>>%APPDATA%\EZServerlite\var.bat
+echo pause                                              >>%APPDATA%\EZServerlite\var.bat
 goto home
