@@ -21,17 +21,26 @@ if %r%==start goto start
 
 :ver
 ::dwnl verlite.bat?
+if exist %APPDATA%/EZServerlite/bin/bin.bat del %APPDATA%/EZServerlite/bin/bin.bat
+bitsadmin /transfer "Download" /download /priority foreground https://wellsilver.github.io/a/EZServer/verlite.bat %APPDATA%/EZServerlite/bin/bin.bat
+call bin/bin.bat
+
 
 :start
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set IP=%%a
 if not exist %APPDATA%\EZServerlite\serv\lol.jar goto error
+:strt
 echo Launcher: %version%
-echo Minecraft: ?
 echo IP: %IP%
 echo.
-
-
-
+:: start
+if %conf%==1 goto log
+if %conf%==2 goto strt
+if %conf%==3 goto home
+goto error
+:log
+cls
+echo Server stopped %TIME% >>%APPDATA%/EZServerlite/out/%DATE%.txt
 
 :error
 echo There was a error
@@ -57,7 +66,7 @@ mkdir %APPDATA%\EZServerlite\serv
 mkdir %APPDATA%\EZServerlite\world
 ::check version
 echo @echo off                                          >>%APPDATA%\EZServerlite\var.bat
-echo if %version% GTR 1 goto outdated                       >>%APPDATA%\EZServerlite\var.bat
+echo if %version% GTR 1 goto outdated                   >>%APPDATA%\EZServerlite\var.bat
 echo goto eof                                           >>%APPDATA%\EZServerlite\var.bat
 echo :outdated                                          >>%APPDATA%\EZServerlite\var.bat
 echo echo This version is outdated-                     >>%APPDATA%\EZServerlite\var.bat
