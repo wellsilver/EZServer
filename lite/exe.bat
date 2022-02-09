@@ -13,6 +13,7 @@ if not exist %APPDATA%\EZServerlite goto inst
 :home
 cls
 echo Welcome
+echo By using this you agree to Mojangs EULA
 echo ver, start
 echo.
 set /p r=$ 
@@ -40,7 +41,7 @@ if not exist %APPDATA%\EZServerlite\serv\lol.jar goto error
 echo Launcher: %version%
 echo IP: %IP%
 echo.
-:: start
+
 if %conf%==1 goto log
 if %conf%==2 goto strt
 if %conf%==3 goto home
