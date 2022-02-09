@@ -1,4 +1,12 @@
 @echo off
+where java >nul 2>nul
+if %errorlevel%==1 (
+    echo Java not found
+    echo It is required you download java from Oracle
+    pause
+    goto eof
+)
+
 ::THIS IS NOT A PORTABLE VERSION
 set /a version=1
 if not exist %APPDATA%\EZServerlite goto inst
@@ -15,15 +23,22 @@ if %r%==start goto start
 ::dwnl verlite.bat?
 
 :start
+for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set IP=%%a
 if not exist %APPDATA%\EZServerlite\serv\lol.jar goto error
-
+echo Launcher: %version%
+echo Minecraft: ?
+echo IP: %IP%
+echo.
 
 
 
 
 :error
 echo There was a error
-
+echo This is most likely because..
+echo you failed to select a version.
+pause
+goto home
 :inst
 echo Download at %APPDATA%/EZServerlite
 set /p w=Y/N:
