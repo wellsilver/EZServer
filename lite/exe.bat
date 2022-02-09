@@ -1,5 +1,6 @@
 @echo off
 ::THIS IS NOT A PORTABLE VERSION
+set /a version=1
 if not exist %APPDATA%\EZServerlite goto inst
 :home
 cls
@@ -13,9 +14,15 @@ if %r%==start goto start
 :ver
 ::dwnl verlite.bat?
 
+:start
+if not exist %APPDATA%\EZServerlite\serv\lol.jar goto error
 
 
 
+
+
+:error
+echo There was a error
 
 :inst
 echo Download at %APPDATA%/EZServerlite
@@ -35,7 +42,7 @@ mkdir %APPDATA%\EZServerlite\serv
 mkdir %APPDATA%\EZServerlite\world
 ::check version
 echo @echo off                                          >>%APPDATA%\EZServerlite\var.bat
-echo if %ver% GTR 1 goto outdated                       >>%APPDATA%\EZServerlite\var.bat
+echo if %version% GTR 1 goto outdated                       >>%APPDATA%\EZServerlite\var.bat
 echo goto eof                                           >>%APPDATA%\EZServerlite\var.bat
 echo :outdated                                          >>%APPDATA%\EZServerlite\var.bat
 echo echo This version is outdated-                     >>%APPDATA%\EZServerlite\var.bat
