@@ -9,7 +9,7 @@ if %errorlevel%==1 (
 
 ::THIS IS NOT A PORTABLE VERSION
 set /a version=1
-if not exist %APPDATA%\EZServerlite goto inst
+if not exist %APPDATA%\EZServerlite goto install
 :home
 cls
 echo Welcome
@@ -57,10 +57,12 @@ echo This is most likely because..
 echo you failed to select a version.
 pause
 goto home
-:inst
+
+:install
+
 echo Download at %APPDATA%/EZServerlite
 set /p w=Y/N:
-if %w%=N goto eof
+if %w%==N goto eof
 ::files
 mkdir %APPDATA%\EZServerlite
 mkdir %APPDATA%\EZServerlite\bin
@@ -74,11 +76,11 @@ bitsadmin /transfer "Download" /download /priority foreground https://wellsilver
 mkdir %APPDATA%\EZServerlite\serv
 mkdir %APPDATA%\EZServerlite\world
 ::check version
-echo @echo off                                          >>%APPDATA%\EZServerlite\var.bat
-echo if %version% GTR 1 goto outdated                   >>%APPDATA%\EZServerlite\var.bat
-echo goto eof                                           >>%APPDATA%\EZServerlite\var.bat
-echo :outdated                                          >>%APPDATA%\EZServerlite\var.bat
-echo echo This version is outdated-                     >>%APPDATA%\EZServerlite\var.bat
+echo @echo off>>%APPDATA%\EZServerlite\var.bat
+echo if %version% GTR 1 goto outdated>>%APPDATA%\EZServerlite\var.bat
+echo goto eof>>%APPDATA%\EZServerlite\var.bat
+echo :outdated>>%APPDATA%\EZServerlite\var.bat
+echo echo This version is outdated->>%APPDATA%\EZServerlite\var.bat
 echo echo You should enter "reinstall" at the home menu.>>%APPDATA%\EZServerlite\var.bat
-echo pause                                              >>%APPDATA%\EZServerlite\var.bat
+echo pause>>%APPDATA%\EZServerlite\var.bat
 goto home
