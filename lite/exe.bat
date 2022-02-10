@@ -10,8 +10,11 @@ if %errorlevel%==1 (
 ::THIS IS NOT A PORTABLE VERSION
 set /a version=1
 if not exist %APPDATA%\EZServerlite goto install
+call %APPDATA%/EZServerlite/var.bat
 :home
 cls
+:hom2
+echo.
 echo Welcome
 echo By using this you agree to Mojangs EULA
 echo ver, start
@@ -19,13 +22,19 @@ echo.
 set /p r=$ 
 if %r%==ver goto ver
 if %r%==start goto start
-
+goto home
+:hom
+echo.
+echo The server has stopped (read above for more info)
+echo If there is a issue do not be afraid to open a issue on the github!
+echo.
+goto hom2
 :ver
 ::dwnl verlite.bat?
 if exist %APPDATA%/EZServerlite/bin/bin.bat del %APPDATA%/EZServerlite/bin/bin.bat
 bitsadmin /transfer "Download" /download /priority foreground https://wellsilver.github.io/a/EZServer/verlite.bat %APPDATA%/EZServerlite/bin/bin.bat
-call bin/bin.bat
-
+call %APPDATA%/EZServerlite/bin/bin.bat
+goto home
 
 :start
 cls
@@ -37,14 +46,17 @@ echo 4. Exit
 set /p conf=$ 
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set IP=%%a
 if not exist %APPDATA%\EZServerlite\serv\lol.jar goto error
+copy "%APPDATA%\EZServerlite\config" "%APPDATA%\EZServerlite\serv
 :strt
+cls
 echo Launcher: %version%
 echo IP: %IP%
 echo.
-
+cd %APPDATA%/EZServerlite/serv
+java -jar lol.jar --nogui
 if %conf%==1 goto log
 if %conf%==2 goto strt
-if %conf%==3 goto home
+if %conf%==3 goto hom
 goto error
 :log
 cls
