@@ -46,7 +46,8 @@ echo 4. Exit
 set /p conf=$ 
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set IP=%%a
 if not exist %APPDATA%\EZServer6\serv\lol.jar goto error
-copy "%APPDATA%\EZServer6\config" "%APPDATA%\EZServer6\serv 
+copy "%APPDATA%\EZServer6\config\server.properties" "%APPDATA%\EZServer6\serv"
+copy "%APPDATA%\EZServer6\config\eula.txt" "%APPDATA%\EZServer6\serv"
 :strt
 cls
 echo Launcher: %version%
@@ -57,6 +58,8 @@ java -Dlog4j2.formatMsgNoLookups=true -jar lol.jar --nogui
 if %conf%==1 goto log
 if %conf%==2 goto strt
 if %conf%==3 goto hom
+if %conf%==4 goto eof
+
 goto error
 :log
 cls
