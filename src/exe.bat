@@ -84,8 +84,8 @@ mkdir %APPDATA%\EZServer6\out
 mkdir %APPDATA%\EZServer6\plugins
 mkdir %APPDATA%\EZServer6\config
 ::config files
-powershell -command "wget https://wellsilver.000webhostapp.com/docs/eula.txt -outfile %APPDATA%/EZServer6/config/eula.txt"
-powershell -command "wget https://wellsilver.000webhostapp.com/docs/server.properties -outfile %APPDATA%/EZServer6/config/server.properties"
+powershell -command "wget wellsilver.github.io/a/EZServer/eula.txt -outfile %APPDATA%/EZServer6/config/eula.txt"
+powershell -command "wget wellsilver.github.io/a/EZServer/server.properties -outfile %APPDATA%/EZServer6/config/server.properties"
 ::back to files
 mkdir %APPDATA%\EZServer6\serv
 mkdir %APPDATA%\EZServer6\world
