@@ -89,7 +89,7 @@ mkdir %APPDATA%\EZServer6\serv
 mkdir %APPDATA%\EZServer6\world
 ::check version
 echo @echo off>>%APPDATA%\EZServer6\var.bat
-echo if %version% GTR 1 goto outdated>>%APPDATA%\EZServer6\var.bat
+echo if %version% GTR 6 goto outdated>>%APPDATA%\EZServer6\var.bat
 echo goto eof>>%APPDATA%\EZServer6\var.bat
 echo :outdated>>%APPDATA%\EZServer6\var.bat
 echo echo This version is outdated->>%APPDATA%\EZServer6\var.bat
