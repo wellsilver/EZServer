@@ -32,7 +32,7 @@ goto hom2
 :ver
 ::dwnl verlite.bat?
 if exist %APPDATA%/EZServer6/bin/bin.bat del %APPDATA%/EZServer6/bin/bin.bat
-bitsadmin /transfer "Download" /download /priority foreground https://wellsilver.github.io/a/EZServer/verlite.bat %APPDATA%/EZServer6/bin/bin.bat
+bitsadmin /transfer "Download" /download /priority foreground https://wellsilver.github.io/a/EZServer/verzionz.bat %APPDATA%/EZServer6/bin/bin.bat
 call %APPDATA%/EZServer6/bin/bin.bat
 goto home
 
