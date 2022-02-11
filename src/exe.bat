@@ -46,7 +46,7 @@ echo 4. Exit
 set /p conf=$ 
 for /f %%a in ('powershell Invoke-RestMethod api.ipify.org') do set IP=%%a
 if not exist %APPDATA%\EZServer6\serv\lol.jar goto error
-copy "%APPDATA%\EZServer6\config" "%APPDATA%\EZServer6\serv
+copy "%APPDATA%\EZServer6\config" "%APPDATA%\EZServer6\serv 
 :strt
 cls
 echo Launcher: %version%
