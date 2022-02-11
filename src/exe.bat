@@ -53,7 +53,7 @@ echo Launcher: %version%
 echo IP: %IP%
 echo.
 cd %APPDATA%/EZServer6/serv
-java -jar lol.jar --nogui -Dlog4j2.formatMsgNoLookups=true
+java -Dlog4j2.formatMsgNoLookups=true -jar lol.jar --nogui
 if %conf%==1 goto log
 if %conf%==2 goto strt
 if %conf%==3 goto hom
