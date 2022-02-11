@@ -64,7 +64,9 @@ echo 1 for auto-restart 2 to go back to home
 echo.
 set /p res=$ 
 :s2
-call serv/start.bat
+cd serv
+call start.bat
+cd ..
 echo.
 echo oops!
 echo.
