@@ -15,6 +15,6 @@ Then it places some information before running the "java" command to start the s
 ### Table on progress
 
 | Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
+| ----------- | ----------- | -----------
+| Planned | EZServer | EZServerpy
+| Paragraph | Text | cool
