@@ -22,11 +22,13 @@ After I finish the next update to EZServer (99%) I will start work on a rewrite 
 - Nope ✖️
 - WIP 🏗️
 - Soon 🚧
+- Next update 🔜
 - Undecided ❓
 
 | Planned | EZServer6 | EZServerpy |
 | ----------- | ----------- | ----------- |
 | Plugins | ✔️ | 🚧 |
 | 1.17+ | ✔️ | 🚧 |
+| Automatic security updates | ✔️(mostly) | 🚧 |
 | Graphics | ✖️ | 🏗️ |
 | Bedrock | ✖️ | ❓ |
