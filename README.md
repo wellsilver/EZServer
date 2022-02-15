@@ -14,9 +14,5 @@ Then it places some information before running the "java" command to start the s
 
 ### Soon
 
-Decide amount of ram
-
-### Known bugs
-
-I havent tested if this is actually a problem yet, but if you start a version incompatible with the server.properties it may create a new one,
-this might not be a problem for some time.
+a | a | a
+a | a | a
