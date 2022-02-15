@@ -12,9 +12,10 @@ Using wget the EULA (Pre filled out, you agree to it by starting the server) .ja
 
 Then it places some information before running the "java" command to start the server
 
-### Graphical rewrite
+### rewrites
 
 After I finish the next update to EZServer (99%) I will start work on a rewrite in python with *graphics*
+After or during the graphical rewrite I will also port(/create) EZServer for linux
 
 ### Table on progress
 
@@ -29,6 +30,9 @@ After I finish the next update to EZServer (99%) I will start work on a rewrite 
 | ----------- | ----------- | ----------- |
 | Plugins | ✔️ | 🚧 |
 | 1.17+ | ✔️ | 🚧 |
-| Automatic security updates | ✔️(mostly) | 🚧 |
+| Automatic security updates | ❓ | 🚧 |
 | Graphics | ✖️ | 🏗️ |
 | Bedrock | ✖️ | ❓ |
+| Windows | ✔️ | ✔️ |
+| Linux | 👷 | ✖️ |
+| Macintosh | ✖️ | 🚧 |
