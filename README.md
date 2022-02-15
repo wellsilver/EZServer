@@ -34,5 +34,5 @@ After or during the graphical rewrite I will also port(/create) EZServer for lin
 | Graphics | ✖️ | 🏗️ |
 | Bedrock | ✖️ | ❓ |
 | Windows | ✔️ | ✔️ |
-| Linux | 👷 | ✖️ |
+| Linux | 🏗️ | ✖️ |
 | Macintosh | ✖️ | 🚧 |
