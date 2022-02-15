@@ -29,3 +29,4 @@ After I finish the next update to EZServer (99%) I will start work on a rewrite 
 | Plugins | ✔️ | 🚧 |
 | 1.17+ | ✔️ | 🚧 |
 | Graphics | ✖️ | 🏗️ |
+| Bedrock | ✖️ | ❓ |
