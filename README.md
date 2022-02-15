@@ -20,7 +20,8 @@ After I finish the next update to EZServer (99%) I will start work on a rewrite 
 
 - Finished ✔️
 - WIP 🏗️
-- soon 🚧
+- Soon 🚧
+- Undecided ❓
 
 | Planned | EZServer5 | EZServerpy |
 | ----------- | ----------- | ----------- |
