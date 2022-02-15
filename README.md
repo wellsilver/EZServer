@@ -19,11 +19,13 @@ After I finish the next update to EZServer (99%) I will start work on a rewrite 
 ### Table on progress
 
 - Finished ✔️
+- Nope ✖️
 - WIP 🏗️
 - Soon 🚧
 - Undecided ❓
 
-| Planned | EZServer5 | EZServerpy |
+| Planned | EZServer6 | EZServerpy |
 | ----------- | ----------- | ----------- |
 | Plugins | ✔️ | 🚧 |
 | 1.17+ | ✔️ | 🚧 |
+| Graphics | ✖️ | 🏗️ |
