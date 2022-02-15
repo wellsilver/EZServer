@@ -37,3 +37,4 @@ After or during the graphical rewrite I will also port(/create) EZServer for lin
 | Windows | ✔️ | ✔️ |
 | Linux | 🏗️ | ✖️ |
 | Macintosh | ✖️ | 🚧 |
+| Has outdated crap?? | ✖️ | ✔️ |
