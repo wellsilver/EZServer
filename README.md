@@ -13,6 +13,4 @@ Using wget the EULA (Pre filled out, you agree to it by starting the server) .ja
 Then it places some information before running the "java" command to start the server
 
 ### Soon
-
-a | a | a
-a | a | a
+-a -a -a 
