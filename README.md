@@ -32,7 +32,7 @@ After or during the graphical rewrite I will also port(/create) EZServer for lin
 | 1.17+ | ✔️ | 🚧 |
 | Logs | 🔜 | 🚧 |
 | Automatic security updates | ❓ | 🚧 |
-| Graphics | ✖️ | 🏗️ |
+| Graphics | ✖️ | 🚧 |
 | Bedrock | ✖️ | ❓ |
 | Windows | ✔️ | ✔️ |
 | Linux | 🏗️ | ✖️ |
