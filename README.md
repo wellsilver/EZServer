@@ -28,7 +28,7 @@ coming later with additional games
 - Undecided ❓
 
 | Name | Planned | EZServer7 |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 | Plugins | ✔️ | 🚧 |
 | 1.17+ | ✔️ | 🚧 |
 | Logs | 🔜 | 🚧 |
