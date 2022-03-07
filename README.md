@@ -14,8 +14,9 @@ Then it places some information before running the "java" command to start the s
 
 ### rewrites
 
-After I finish the next update to EZServer (99%) I will start work on a rewrite in python with *graphics*
-After or during the graphical rewrite I will also port(/create) EZServer for linux
+Python rewrite; its too hard for my current skill level so instead--
+EZServer7, new rewrite for shell and batch 
+coming later with additional games
 
 ### Table on progress
 
@@ -26,15 +27,14 @@ After or during the graphical rewrite I will also port(/create) EZServer for lin
 - Next update 🔜
 - Undecided ❓
 
-| Planned | EZServer6 | EZServerpy |
-| ----------- | ----------- | ----------- |
+| Name | Planned | EZServer7 |
+| ----------- | ----------- |
 | Plugins | ✔️ | 🚧 |
 | 1.17+ | ✔️ | 🚧 |
 | Logs | 🔜 | 🚧 |
-| Automatic security updates | ❓ | 🚧 |
-| Graphics | ✖️ | 🚧 |
-| Bedrock | ✖️ | ❓ |
+| Automatic security updates | ✔️ | 🚧 |
+| Graphics | ✖️ | ✖️ |
+| Bedrock | ❓ | ✖️ |
 | Windows | ✔️ | ✔️ |
-| Linux | 🏗️ | ✖️ |
-| Macintosh | ✖️ | 🚧 |
-| Has outdated crap?? | ✖️ | ✔️ |
+| Linux | ✔️ | 🚧 |
+| Macintosh | ✖️ | ✖️ |
