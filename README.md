@@ -12,29 +12,6 @@ Using wget the EULA (Pre filled out, you agree to it by starting the server) .ja
 
 Then it places some information before running the "java" command to start the server
 
-### rewrites
+### Rewrites
 
-Python rewrite; its too hard for my current skill level so instead--
-EZServer7, new rewrite for shell and batch 
-coming later with additional games
-
-### Table on progress
-
-- Finished ✔️
-- Nope ✖️
-- WIP 🏗️
-- Soon 🚧
-- Next update 🔜
-- Undecided ❓
-
-| Name | Planned | EZServer7 |
-| ----------- | ----------- | ----------- |
-| Plugins | ✔️ | 🚧 |
-| 1.17+ | ✔️ | 🚧 |
-| Logs | 🔜 | 🚧 |
-| Automatic security updates | ✔️ | 🚧 |
-| Graphics | ✖️ | ✖️ |
-| Bedrock | ❓ | ✖️ |
-| Windows | ✔️ | ✔️ |
-| Linux | ✔️ | 🚧 |
-| Macintosh | ✖️ | ✖️ |
+okay im actually learning c now so its pretty easy, I removed all the tables because its bad,lol. But C compiles directly into a .exe and has graphics and all that so this will be cool.
